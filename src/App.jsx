@@ -1,10 +1,11 @@
 import "./App.css";
 
+const base = import.meta.env.BASE_URL;
 const audioFiles = [
-  "/audio/audio1.m4a",
-  "/audio/audio2.m4a",
-  "/audio/audio3.m4a",
-  "/audio/audio4.m4a",
+  `${base}audio/audio1.m4a`,
+  `${base}audio/audio2.m4a`,
+  `${base}audio/audio3.m4a`,
+  `${base}audio/audio4.m4a`,
 ];
 
 function App() {
