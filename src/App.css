@@ -49,6 +49,7 @@
 }
 
 .bullshit-button {
+  -webkit-tap-highlight-color: transparent;
   background: red;
   color: white;
   font-size: 3rem;
