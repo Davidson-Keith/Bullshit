@@ -1,5 +1,7 @@
-import "./App.css";
 import { useRef } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import "./App.css";
 
 const base = import.meta.env.BASE_URL;
 const audioFiles = [
@@ -27,11 +29,32 @@ function App() {
   };
 
   return (
-    <div className="bullshit-container">
-      <button className="bullshit-button" onClick={playRandomAudio}>
+    <Box
+      sx={{
+        height: "100dvh",
+        width: "100vw",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        bgcolor: "black",
+      }}
+    >
+      <Button
+        variant="contained"
+        color="error"
+        onClick={playRandomAudio}
+        sx={{
+          width: 300,
+          height: 300,
+          borderRadius: "50%",
+          fontSize: "3rem",
+          boxShadow: 3,
+          textTransform: "none",
+        }}
+      >
         Bullshit
-      </button>
-    </div>
+      </Button>
+    </Box>
   );
 }
 
