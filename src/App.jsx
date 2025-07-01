@@ -1,4 +1,5 @@
 import "./App.css";
+import { useRef } from "react";
 
 const base = import.meta.env.BASE_URL;
 const audioFiles = [
@@ -9,8 +10,14 @@ const audioFiles = [
 ];
 
 function App() {
+  const lastIndexRef = useRef(null);
+
   const playRandomAudio = () => {
-    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * audioFiles.length);
+    } while (randomIndex === lastIndexRef.current && audioFiles.length > 1);
+    lastIndexRef.current = randomIndex;
     const audio = new Audio(audioFiles[randomIndex]);
     audio.play();
   };
