@@ -12,7 +12,7 @@ const audioFiles = [
 function App() {
   const lastIndexRef = useRef(null);
 
-  const playRandomAudio = () => {
+  const playRandomAudio = (e) => {
     let randomIndex;
     do {
       randomIndex = Math.floor(Math.random() * audioFiles.length);
@@ -20,6 +20,10 @@ function App() {
     lastIndexRef.current = randomIndex;
     const audio = new Audio(audioFiles[randomIndex]);
     audio.play();
+    // Remove focus from the button after click/tap
+    if (e && e.target) {
+      e.target.blur();
+    }
   };
 
   return (
