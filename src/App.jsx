@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import "./App.css";
@@ -20,18 +20,6 @@ const audioFiles = [
 function App() {
   const lastIndexRef = useRef(null);
   const shuffledOrderRef = useRef(null);
-  const boxRef = useRef();
-
-  useEffect(() => {
-    function setHeight() {
-      if (boxRef.current) {
-        boxRef.current.style.height = window.innerHeight + "px";
-      }
-    }
-    setHeight();
-    window.addEventListener("resize", setHeight);
-    return () => window.removeEventListener("resize", setHeight);
-  }, []);
 
   const playRandomAudio = (e) => {
     // Generate a new shuffled order if we don't have one or if we've played all files
@@ -63,9 +51,9 @@ function App() {
 
   return (
     <Box
-      ref={boxRef}
       sx={{
         width: "100vw",
+        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
