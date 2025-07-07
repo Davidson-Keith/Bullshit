@@ -1,0 +1,16 @@
+{
+  "name": "Bullshit Button",
+  "short_name": "Bullshit",
+  "description": "A simple app with a big red button that plays random audio when clicked",
+  "start_url": "/Bullshit/",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/Bullshit/bullshit.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
