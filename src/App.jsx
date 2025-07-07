@@ -28,7 +28,7 @@ function App() {
       lastIndexRef.current >= audioFiles.length - 1
     ) {
       // Create a shuffled array of indices using the Fisher-Yates shuffle algorithm.
-      const indices = Array.from({ length: audioFiles.length }, (_, i) => i); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      const indices = Array.from({ length: audioFiles.length }, (_, i) => i);
       for (let i = indices.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [indices[i], indices[j]] = [indices[j], indices[i]]; // Swap the elements at indices i and j.
