@@ -53,7 +53,7 @@ function App() {
     <Box
       sx={{
         width: "100vw",
-        height: "100dvh",
+        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
