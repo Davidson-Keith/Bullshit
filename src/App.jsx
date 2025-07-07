@@ -73,7 +73,7 @@ function App() {
           textTransform: "none",
         }}
       >
-        Bullshit
+        BULLSHIT
       </Button>
     </Box>
   );
